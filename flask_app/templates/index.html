@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../static/css/style.css" />
+
+        <title>Login and Registration</title>
+    </head>
+    <body>
+        <main class="container asCol">
+            <h1>Login and Registration</h1>
+            {% with messages = get_flashed_messages() %}
+            <!-- declare a variable called messages -->
+            {% if messages %}
+            <!-- check if there are any messages -->
+            {% for message in messages %}
+            <!-- loop through the messages -->
+            <p class="text-danger">{{message}}</p>
+            <!-- display each message in a paragraph tag -->
+            {% endfor %} {% endif %} {% endwith %}
+            <div class="subContainer asRow">
+                <div class="asCol">
+                    <h2>Register here!</h2>
+                    <form action="/create_user" method="POST">
+                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="first_name">First Name: </label>
+                                    <br />
+                                    <input
+                                        type="text"
+                                        name="first_name"
+                                        id="first_name"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="last_name">Last Name: </label>
+                                    <br />
+                                    <input
+                                        type="text"
+                                        name="last_name"
+                                        id="last_name"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">Email: </label><br />
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        id="email"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">Password: </label>
+                                    <br />
+                                    <input
+                                        type="text"
+                                        name="password"
+                                        id="password"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="confirm_password">
+                                        Confirm Password
+                                    </label>
+                                    <br />
+                                    <input
+                                        type="text"
+                                        name="confirm_password"
+                                        id="confirm_password"
+                                    />
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <input type="submit" value="Register!" />
+                    </form>
+                </div>
+                <div class="asCol">
+                    <h2>Login here!</h2>
+                    <form action="/login_user" method="POST">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="login_email"
+                                        >Login Email: </label
+                                    ><br />
+                                    <input
+                                        type="text"
+                                        name="login_email"
+                                        id="login_email"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="login_password"
+                                        >Login Password: </label
+                                    ><br />
+                                    <input
+                                        type="text"
+                                        name="login_password"
+                                        id="login_password"
+                                    />
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <input type="submit" value="Login!" />
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

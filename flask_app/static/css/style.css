@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "sans-serif";
+}
+
+main {
+    width: 70%;
+    height: 350px;
+}
+
+.container {
+    width: 70%;
+    height: 75vh;
+    margin: 0 auto;
+    padding: 0 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+.subContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.subSubContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.asCol {
+    flex-direction: column;
+}
+
+.asRow {
+    flex-direction: row;
+    /*justify-content: space-evenly;*/
+}
+
+div.bottomContainer {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: 100px;
+}
+
+.fixedPosition {
+    position: fixed;
+    top: 130px;
+    left: 110px;
+}
+
+.asRowLeft {
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+}
+
+span {
+    font-weight: bold;
+    height: 200px;
+}
+
+td.nowrap {
+    height: 200px;
+    font-size: x-large;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    width: 90px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px black;
+    background-color: rgb(197, 255, 109);
+}
